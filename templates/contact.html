@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact {{ contact.email }}
+{% endblock %}
+
+{% block content %}
+<h1>Contact Information</h1>
+
+<p>Email: {{ contact.email }}</p>
+
+{% if contact.phone %}
+  <p>Phone: {{ contact.phone }}</p>
+{% else %}
+  <p>Phone number not available.</p>
+{% endif %}
+
+{% if contact.instagram %}
+  <p>Instagram: {{ contact.instagram }}</p>
+{% else %}
+  <p>Instagram handle not available.</p>
+{% endif %}
+
+{% endblock %}
+
